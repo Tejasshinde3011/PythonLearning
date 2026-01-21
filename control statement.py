@@ -82,7 +82,57 @@ for i in range(1, number+1):
 print(factorial)
 
 # Write a program to count the number of digits in a number.
-num1 = int(input("Enter a number : "))
+num1 = 1234567
+count=0
+if num1 == 0:
+   count =1
+else:
+   while num1!=0:
+      count+=1
+      num1 = num1//10
+print(count)
 
+# Write a program to check whether a given number is a prime number.
+num = 3
+if num <= 1:
+    print("Not Prime")
+else:
+    for i in range(2, num):
+        if num % i == 0:
+            print("Not Prime")
+            break
+    else:
+        print("Prime")
 
-   
+# Write a program to reverse a given number.
+num = 2345
+rev=0
+while num!=0:
+   digit = num%10
+   print(digit)
+   rev = rev * 10 + digit
+   num = num//10
+print(rev)
+
+# Write a program to calculate the sum of digits of a given number.
+num = 2345
+while num!=0:
+   digit = num%10
+   num =num//10
+   sum = sum + digit
+print(sum)
+
+# Write a program to print the first n terms of the Fibonacci series.
+num = int(input("Enter a number: "))
+a, b = 0, 1
+if num<=0:
+   print("Give positive number")
+elif num==1:
+   print(a)
+else:
+   print(a, b, end=" ")
+   for i in range(2,num):
+      c = a+b
+      print(c, end=" ")
+      a=b
+      b=c
